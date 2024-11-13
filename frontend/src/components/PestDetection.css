@@ -1,0 +1,40 @@
+.pest-detection-container {
+  background-color: #e74c3c; /* Ensure the color matches */
+  padding: 2rem; /* Adjusted padding */
+  margin: 12rem auto 1.5rem auto; /* Increased margin-top to push content even further down */
+  width: 90%; /* Set width for better alignment */
+  border-radius: 10px; /* Ensure rounded corners */
+  color: white; /* Make text visible */
+  text-align: center; /* Center align content */
+}
+
+.pest-detection-container h2 {
+  font-size: 2.5rem; /* Adjusted size for better readability */
+  margin-bottom: 1rem;
+}
+
+.pest-detection-container p {
+  font-size: 1.2rem; /* Adjusted size for balance */
+  margin-bottom: 1.5rem;
+}
+
+.pest-detection-container input[type="file"] {
+  width: 80%; /* Adjusted width */
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+}
+
+.pest-detection-container .message {
+  font-size: 1.2rem; /* Adjusted size */
+  margin-top: 1rem;
+  color: #fff;
+}
+
+.pest-detection-container .error {
+  font-size: 1.2rem; /* Adjusted size */
+  color: red;
+  margin-top: 1rem;
+}

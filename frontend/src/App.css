@@ -1,0 +1,52 @@
+/* Navbar Styles */
+.navbar {
+  background-color: #3498db;
+  padding: 0.6rem 1rem; /* Reduced padding */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand h2 {
+  color: white;
+  font-size: 1.5rem; /* Adjusted font size */
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease; /* Slow transition */
+}
+
+.navbar-links a:hover {
+  color: #f39c12;
+}
+
+/* Home Page */
+.home-container {
+  text-align: center;
+  padding: 2rem 1rem; /* Reduced padding */
+  background-color: #2980b9;
+  color: white;
+}
+
+/* Weather & Crop Recommendation */
+.weather-crop-container {
+  padding: 1.5rem; /* Reduced padding */
+  margin: 1.5rem auto; /* Adjusted margin */
+  width: 90%; /* Adjusted width for better fit */
+}
+
+/* Pest Detection */
+.pest-detection-container {
+  padding: 1.5rem;
+  margin: 1.5rem auto;
+  width: 90%;
+}

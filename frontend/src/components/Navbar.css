@@ -1,0 +1,48 @@
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: center;
+  background-color: #00796b;
+  padding: 0.5rem 0; /* Reduced padding for compactness */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar Links */
+.navbar a {
+  color: #ffffff;
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  border-radius: 5px;
+  transition: background-color 0.4s ease, transform 0.3s ease;
+}
+
+/* Hover Effect */
+.navbar a:hover {
+  background-color: #004d40;
+  transform: scale(1.1); /* Slow zoom effect */
+}
+
+/* Active Link (Optional) */
+.navbar a.active {
+  background-color: #004d40;
+  font-weight: bold;
+}
+
+/* Reduce Vertical Navbar Spacing */
+body {
+  padding-top: 2.5rem; /* Adjust based on navbar height */
+}
+
+/* Optional: Mobile-Friendly Adjustments */
+@media (max-width: 768px) {
+  .navbar a {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+}
