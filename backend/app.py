@@ -26,21 +26,18 @@ def get_weather():
         return jsonify({"error": "Location not provided"}), 400
 
     try:
-        # OpenWeatherMap API URL
         url = f"http://api.openweathermap.org/data/2.5/weather?q={location}&appid={OPENWEATHER_API_KEY}&units=metric"
         response = requests.get(url)
         weather_data = response.json()
 
-        # Check if the location is found
         if response.status_code != 200:
             return jsonify({"error": "Location not found"}), 404
 
-        # Extract relevant data
         result = {
             "location": weather_data.get("name"),
             "temperature": f"{weather_data['main']['temp']}°C",
             "humidity": f"{weather_data['main']['humidity']}%",
-            "description": weather_data['weather'][0]['description'].capitalize()
+            "precipitation": f"{weather_data.get('rain', {}).get('1h', 0)} mm"  # Handle precipitation gracefully
         }
         return jsonify(result)
 
@@ -71,7 +68,6 @@ def get_crop_recommendation():
         humidity = weather_data['main']['humidity']
         rainfall = weather_data.get('rain', {}).get('1h', 0)
 
-        # Prepare the input data for the crop recommendation model
         input_data = [[N, P, K, temperature, humidity, ph, rainfall]]
 
         # Get the predicted crop from the model

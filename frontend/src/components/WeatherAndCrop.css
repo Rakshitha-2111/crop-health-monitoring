@@ -38,8 +38,7 @@
 }
 
 .weather-crop-container input {
-  height: 2.5rem; /* Reduced height for balanced size */
-  font-size: 1rem; /* Slightly smaller font for balance */
+  font-size: 1rem;
   padding: 0.5rem 0.75rem;
   border: 1px solid #b0bec5;
   border-radius: 8px;
@@ -50,6 +49,16 @@
   border-color: #00796b;
   box-shadow: 0 0 6px rgba(0, 121, 107, 0.2);
   outline: none;
+}
+
+.weather-crop-container .large-input {
+  height: 3rem;
+  font-size: 1.25rem;
+}
+
+.weather-crop-container .small-input {
+  height: 2.5rem;
+  font-size: 1rem;
 }
 
 .weather-crop-container button {

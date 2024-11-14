@@ -53,37 +53,38 @@ function WeatherAndCrop() {
             type="text"
             value={location}
             onChange={(e) => setLocation(e.target.value)}
-            placeholder="Enter your location (e.g., City or Coordinates)"
-            className="border border-gray-300"
+            placeholder="Enter your location"
+            className="large-input"
           />
+          <p>Enter soil condition:</p>
           <div className="grid grid-cols-2 gap-6">
             <input
               type="number"
               value={N}
               onChange={(e) => setN(e.target.value)}
-              placeholder="N (Nitrogen)"
-              className="border border-gray-300"
+              placeholder="N"
+              className="small-input"
             />
             <input
               type="number"
               value={P}
               onChange={(e) => setP(e.target.value)}
-              placeholder="P (Phosphorus)"
-              className="border border-gray-300"
+              placeholder="P"
+              className="small-input"
             />
             <input
               type="number"
               value={K}
               onChange={(e) => setK(e.target.value)}
-              placeholder="K (Potassium)"
-              className="border border-gray-300"
+              placeholder="K"
+              className="small-input"
             />
             <input
               type="number"
               value={ph}
               onChange={(e) => setPh(e.target.value)}
-              placeholder="pH Level"
-              className="border border-gray-300"
+              placeholder="pH"
+              className="small-input"
             />
           </div>
           <button type="submit">Get Recommendations</button>
@@ -92,7 +93,7 @@ function WeatherAndCrop() {
         {weather && (
           <div className="weather-card animate__animated animate__fadeInUp">
             <h3>Weather Info</h3>
-            <p><strong>Temperature:</strong> {weather.temperature}°C</p>
+            <p><strong>Temperature:</strong> {weather.temperature.toFixed(2)}°C</p>
             <p><strong>Humidity:</strong> {weather.humidity}%</p>
             <p><strong>Precipitation:</strong> {weather.precipitation} mm</p>
           </div>

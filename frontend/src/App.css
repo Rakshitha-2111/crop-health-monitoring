@@ -1,52 +1,45 @@
-/* Navbar Styles */
-.navbar {
-  background-color: #3498db;
-  padding: 0.6rem 1rem; /* Reduced padding */
+.App {
+  text-align: center;
+  padding-top: 70px; /* Add top padding to avoid content overlap with navbar */
+}
+
+.navbar-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px 30px;
+  background-color: rgba(30, 136, 229, 0);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: background-color 1s ease, opacity 1s ease;
+  opacity: 0;
+  pointer-events: none;
 }
 
-.navbar-brand h2 {
-  color: white;
-  font-size: 1.5rem; /* Adjusted font size */
+.navbar-container.visible {
+  background-color: rgba(43, 62, 79, 0.9);
+  opacity: 1;
+  pointer-events: all;
 }
 
-.navbar-links {
-  list-style: none;
+.App-header {
+  background: linear-gradient(to bottom right, #e1f5fe, #b3e5fc);
+  min-height: 100vh;
   display: flex;
-  gap: 1.5rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #0d47a1;
 }
 
-.navbar-links a {
-  color: white;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: color 0.3s ease; /* Slow transition */
+.App-header h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  animation: fadeIn 1s;
 }
 
-.navbar-links a:hover {
-  color: #f39c12;
-}
-
-/* Home Page */
-.home-container {
-  text-align: center;
-  padding: 2rem 1rem; /* Reduced padding */
-  background-color: #2980b9;
-  color: white;
-}
-
-/* Weather & Crop Recommendation */
-.weather-crop-container {
-  padding: 1.5rem; /* Reduced padding */
-  margin: 1.5rem auto; /* Adjusted margin */
-  width: 90%; /* Adjusted width for better fit */
-}
-
-/* Pest Detection */
-.pest-detection-container {
-  padding: 1.5rem;
-  margin: 1.5rem auto;
-  width: 90%;
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
